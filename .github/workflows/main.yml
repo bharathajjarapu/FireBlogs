@@ -19,7 +19,7 @@ jobs:
 
       - name: Build
         env:
-          CI: false
+          CI: true
         run: npm run build
 
       - name: Archive Production Artifact
