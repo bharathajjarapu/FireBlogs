@@ -11,7 +11,7 @@ import './App.css';
 
 const App = () => {
     const [user, setUser] = useState(null);
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
 
     useEffect(() => {
         const storedUser = localStorage.getItem('user');
@@ -30,6 +30,10 @@ const App = () => {
         });
         return unsubscribe;
     }, []);
+
+    useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
 
     const handleLogout = async () => {
         await auth.signOut();
