@@ -1,0 +1,54 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-bottom: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: var(--button-text-color);
+  background-color: var(--button-bg-color);
+  font-family: 'Helvetica', sans-serif;
+}
+
+.create-button:hover,
+.logout-button:hover,
+.theme-button:hover,
+.delete-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.post-card {
+  background-color: var(--bg-color);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
